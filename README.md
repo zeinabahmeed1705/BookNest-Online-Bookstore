@@ -12,7 +12,7 @@ Khalid, Mr. Younes Zied, Mr. Mahmoud Hani
 | Zeinab Ahmed | 13003261 | T6 | ZeinabAhmeed1705 |
 | Farah Elhelaly | 13001774 | T6 | FarahElhelaly |
 | Jana Shoura | 10000520 | T6 | JanaElshoura |
-| Yassin Eltourky | 13001103 | T6 | YassinaTourky |
+| Yassin Eltourky | 13001103 | T6 | YassinaTourky-ai |
 | Ali Haytham | 13002329 | T8 | AliHaythamMoh |
 | Eyad Radwan | 13001536 | T04 | Eyadd06 |
 

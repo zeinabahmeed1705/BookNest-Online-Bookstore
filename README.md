@@ -1,5 +1,3 @@
-# BookNest -- Online Bookstore
-
 **Course:** Electronic Business Development (BINF 503) · Winter 2026\
 **Instructor:** Dr. Nourhan Hamdi\
 **Teaching Assistants:** Mr. Nour Gaser, Mr. Omar Alaa, Ms. Mariam
@@ -57,90 +55,16 @@ easily find and purchase their favorite books.
 ### 3.2 The use cases we will build
 
   --------------------------------------------------------------------------------
-  \#             Use case       What the user   What they see     What is stored
-                                does                              
-  -------------- -------------- --------------- ----------------- ----------------
-  1              Registration   Registers with  Registration and  A User document
-                 and login      name, email,    login forms;      is created with
-                                and password;   after successful  the customer's
-                                logs in with    authentication,   name, email,
-                                email and       the customer sees role, and
-                                password.       the bookstore     bcrypt-hashed
-                                                home page with    password. Login
-                                                their name in the verifies the
-                                                header.           stored password
-                                                                  hash and returns
-                                                                  a JWT.
 
-  2              Book           An              An administration Book documents
-                 Management     administrator   page showing the  are created,
-                                adds a book,    book collection,  read, updated,
-                                edits its       with forms and    and deleted.
-                                information or  controls to add,  Each book stores
-                                stock, and      edit, and delete  its title,
-                                deletes a book. books.            author,
-                                                                  description,
-                                                                  category, price,
-                                                                  stock, and
-                                                                  optional image
-                                                                  reference.
+| # | Use case | What the user does | What they see | What is stored |
+|---|---|---|---|---|
+| 1 | Registration and Login | Registers with name, email, and password, then logs in. | Registration and login forms; after successful login, the customer sees the bookstore home page. | A User document containing name, email, role, and bcrypt-hashed password. Login verifies the password hash and returns a JWT. |
+| 2 | Book Management | An administrator adds, edits, and deletes books. | An administration page showing the book collection, with forms and controls to add, edit, and delete books. | Book documents containing title, author, description, category, price, stock, and optional image reference. |
+| 3 | Shopping Cart Management | A customer adds books to the cart, changes quantities, and removes books. | A cart page showing selected books, quantities, prices, and the calculated total. | A Cart document associated with the customer, referencing Book documents and storing quantities. Removed items are deleted from the cart. |
+| 4 | Order Management | A customer places an order using their cart. An administrator views orders and updates their statuses. | Customers see order confirmation and order history. Administrators see an order management page with order details and status controls. | An Order document containing customer reference, ordered book references, quantities, purchase-time prices, total price, and status. The administrator can update the status. |
+| 5 | Book Reviews and Ratings | A customer submits a rating and written review, then edits or deletes their own review. | A review section on the book details page showing existing reviews and a form to submit or edit the customer's review. | Review documents referencing the customer and book, with a rating and comment. |
+| 6 | Wishlist Management | A customer adds books to their personal wishlist and removes books they are no longer interested in. | A personal wishlist page displaying saved books and an option to remove each book. | A Wishlist document associated with the customer, storing references to saved Book documents. Removing a book deletes its reference from the wishlist. |
 
-  3              Shopping Cart  A customer adds A shopping cart   A Cart document
-                 Management     books to their  page showing      associated with
-                                cart, changes   selected books,   the customer is
-                                quantities, and quantities,       created or
-                                removes books   individual        updated. Its
-                                they no longer  prices, and the   items store
-                                want.           calculated total. references to
-                                                                  Book documents
-                                                                  and their
-                                                                  quantities;
-                                                                  removed items
-                                                                  are deleted from
-                                                                  the cart.
-
-  4              Order          A customer      Customers see an  An Order
-                 Management     places an order order             document is
-                                using their     confirmation and  created with the
-                                cart. An        their order       customer
-                                administrator   history.          reference,
-                                views orders    Administrators    ordered book
-                                and updates     see an order      references,
-                                their statuses  management page   quantities,
-                                as they are     with order        prices at the
-                                processed.      details and       time of
-                                                status controls.  purchase, total
-                                                                  price, and
-                                                                  status. The
-                                                                  status is
-                                                                  updated by the
-                                                                  administrator.
-
-  5              Book Reviews   A customer      A review section  Review documents
-                 and Ratings    submits a       on the book       are created,
-                                rating and      details page      read, updated,
-                                written review  showing existing  and deleted.
-                                for a book,     reviews and a     Each review
-                                then edits or   form to submit or stores
-                                deletes their   edit the          references to
-                                own review.     customer's        its customer and
-                                                review.           book, a rating,
-                                                                  and a comment.
-
-  6              Wishlist       A customer adds A personal        A Wishlist
-                 Management     books to their  wishlist page     document
-                                personal        displaying saved  associated with
-                                wishlist and    books and an      the customer is
-                                removes books   option to remove  created or
-                                they are no     each book.        updated. It
-                                longer                            stores
-                                interested in.                    references to
-                                                                  saved Book
-                                                                  documents;
-                                                                  removing a book
-                                                                  deletes its
-                                                                  reference from
-                                                                  the wishlist.
   --------------------------------------------------------------------------------
 
 ## 4. Who owns what

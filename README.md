@@ -69,14 +69,14 @@ easily find and purchase their favorite books.
 
 ## 4. Who owns what
 
-  Member   Use case
-  -------- ------------------------------
-  zeinab   1\. Registration and login
-  farah    2\. Book Management
-  jana     3\. Shopping Cart Management
-  yassin   4\. Order Management
-  ali      5\. Book Reviews and Ratings
-  eyad     6\. Wishlist Management
+| Member | Use case |
+|---|---|
+| zeinab | 1. Registration and Login |
+| farah | 2. Book Management |
+| jana | 3. Shopping Cart Management |
+| yassin | 4. Order Management |
+| ali | 5. Book Reviews and Ratings |
+| eyad | 6. Wishlist Management |
 
 ## 5. Data model
 
@@ -220,30 +220,3 @@ respective use cases.
 > 2026, 23:59). Then fill it in: we follow these steps to run your
 > project.
 
-### Back end
-
-``` bash
-cd backend
-npm install
-# create backend/.env from backend/.env.example (see the table below)
-npm start
-```
-
-The API runs on http://localhost:3000.
-
-  Variable in `.env`       What it is
-  ------------------------ ------------------------------------------------------
-  `MONGODB_URI`            The connection string of your MongoDB Atlas database
-  `JWT_SECRET`             Any long random text, used to sign login tokens
-  \[Any other variable\]   \[What it is\]
-
-### Front end
-
-``` bash
-cd frontend
-npm install
-npm run dev
-```
-
-The app runs on \[the address `npm run dev` prints,
-e.g. http://localhost:5173\].

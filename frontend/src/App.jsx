@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="app">
       <header>
-<h1 id="project-name">BookNest - Online Bookstore</h1>        <p>Your next favorite book is waiting for you.</p>
-      </header>
+<h1 id="project-name">BookNest - Online Bookstore</h1>      </header>
 
       <main>
         <h2>Welcome to BookNest!</h2>
